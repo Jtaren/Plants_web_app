@@ -34,10 +34,11 @@ def create_app(test_config=None):
 
         if plant is None:
             abort(404)
-
-        return jsonify({
-            'success' : True,
-            'plant': plant.format()
-            })
+        
+        else:
+            return jsonify({
+                'success' : True,
+                'plant': plant.format()
+                })
 
     return app
