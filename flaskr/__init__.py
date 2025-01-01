@@ -16,7 +16,7 @@ def create_app(test_config=None):
 
     @app.route('/plants')
     def get_plants():
-        plants = Plants.query.all()
+        plants = Plant.query.all()
         formatted_plants = [plant.format() for plant in plants]
 
         return jsonify({
